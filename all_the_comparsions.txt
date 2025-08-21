@@ -1,0 +1,150 @@
+DETAILED RANKING ANALYSIS BY DATASET
+====================================================================================================
+
+AGGREGATED DATASET - TOP 6 METHODS RANKING:
+==========================================================================================
+RANKING BY MEAN ABSOLUTE ERROR (Lower is Better):
+------------------------------------------------------------------------------------------
+Rank  Owner                     MAE          MSE          R²          
+------------------------------------------------------------------------------------------
+1     oscar-mendez-lucio        0.509        0.514        0.594
+2     ccorbi                    0.516        0.529        0.603
+3     siat353                   0.517        0.515        0.598
+4     xubf                      0.518        0.537        0.594
+5     alx-dga                   0.522        0.536        0.588
+6     luispintoc                0.532        0.540        0.585
+------------------------------------------------------------------------------------------
+33    boltz2                    4.299        19.612        -14.981
+
+Boltz2 MAE Ranking: 33/33 methods
+MAE Percentile: 3.0%
+
+==========================================================================================
+RANKING BY AVERAGE CORRELATION (Higher is Better):
+------------------------------------------------------------------------------------------
+Rank  Owner                     Avg Corr     Kendall    Pearson    Spearman  
+------------------------------------------------------------------------------------------
+1     oscar-mendez-lucio        0.744        0.626      0.789      0.816
+2     ccorbi                    0.762        0.649      0.813      0.823
+3     siat353                   0.731        0.614      0.788      0.792
+4     xubf                      0.735        0.612      0.794      0.798
+5     alx-dga                   0.746        0.628      0.800      0.811
+6     luispintoc                0.751        0.634      0.806      0.812
+------------------------------------------------------------------------------------------
+20    boltz2                    0.687        0.565      0.741      0.756
+
+Boltz2 Correlation Ranking: 20/33 methods
+Correlation Percentile: 42.4%
+
+Boltz2 Individual Metric Rankings in Aggregated Dataset:
+------------------------------------------------------------
+Kendall Tau         : 21/33
+Pearsonr            : 21/33
+Spearmanr           : 21/33
+Mean Absolute Error : 33/33
+Mean Squared Error  : 33/33
+R²                  : 33/33
+
+SARS-COV-2 MPRO - TOP 6 METHODS RANKING:
+==========================================================================================
+RANKING BY MEAN ABSOLUTE ERROR (Lower is Better):
+------------------------------------------------------------------------------------------
+Rank  Owner                     MAE          MSE          R²          
+------------------------------------------------------------------------------------------
+1     oscar-mendez-lucio        0.533        0.487        0.725
+2     siat353                   0.536        0.512        0.711
+3     alx-dga                   0.549        0.556        0.686
+4     ryan-deepmirror           0.558        0.547        0.691
+5     luispintoc                0.559        0.566        0.681
+6     xubf                      0.560        0.593        0.665
+------------------------------------------------------------------------------------------
+33    boltz2                    3.938        16.264        -8.149
+
+Boltz2 MAE Ranking: 33/33 methods
+MAE Percentile: 3.0%
+
+==========================================================================================
+RANKING BY AVERAGE CORRELATION (Higher is Better):
+------------------------------------------------------------------------------------------
+Rank  Owner                     Avg Corr     Kendall    Pearson    Spearman  
+------------------------------------------------------------------------------------------
+1     oscar-mendez-lucio        0.790        0.655      0.862      0.852
+2     siat353                   0.799        0.673      0.868      0.856
+3     alx-dga                   0.794        0.671      0.859      0.851
+4     ryan-deepmirror           0.793        0.666      0.862      0.852
+5     luispintoc                0.788        0.667      0.857      0.841
+6     xubf                      0.777        0.652      0.843      0.836
+------------------------------------------------------------------------------------------
+21    boltz2                    0.746        0.606      0.824      0.807
+
+Boltz2 Correlation Ranking: 21/33 methods
+Correlation Percentile: 39.4%
+
+Boltz2 Individual Metric Rankings in SARS-CoV-2 Mpro:
+------------------------------------------------------------
+Kendall Tau         : 22/33
+Pearsonr            : 20/33
+Spearmanr           : 24/33
+Mean Absolute Error : 33/33
+Mean Squared Error  : 33/33
+R²                  : 33/33
+
+MERS-COV MPRO - TOP 6 METHODS RANKING:
+==========================================================================================
+RANKING BY MEAN ABSOLUTE ERROR (Lower is Better):
+------------------------------------------------------------------------------------------
+Rank  Owner                     MAE          MSE          R²          
+------------------------------------------------------------------------------------------
+1     ccorbi                    0.437        0.461        0.543
+2     xubf                      0.477        0.481        0.523
+3     oscar-mendez-lucio        0.484        0.541        0.464
+4     alx-dga                   0.496        0.515        0.490
+5     siat353                   0.498        0.519        0.485
+6     luispintoc                0.505        0.515        0.489
+------------------------------------------------------------------------------------------
+33    boltz2                    4.660        22.960        -21.814
+
+Boltz2 MAE Ranking: 33/33 methods
+MAE Percentile: 3.0%
+
+==========================================================================================
+RANKING BY AVERAGE CORRELATION (Higher is Better):
+------------------------------------------------------------------------------------------
+Rank  Owner                     Avg Corr     Kendall    Pearson    Spearman  
+------------------------------------------------------------------------------------------
+1     ccorbi                    0.728        0.620      0.766      0.797
+2     xubf                      0.692        0.573      0.744      0.759
+3     oscar-mendez-lucio        0.698        0.598      0.716      0.779
+4     alx-dga                   0.699        0.585      0.741      0.770
+5     siat353                   0.664        0.555      0.708      0.729
+6     luispintoc                0.714        0.602      0.756      0.783
+------------------------------------------------------------------------------------------
+21    boltz2                    0.629        0.524      0.657      0.706
+
+Boltz2 Correlation Ranking: 21/33 methods
+Correlation Percentile: 39.4%
+
+Boltz2 Individual Metric Rankings in MERS-CoV Mpro:
+------------------------------------------------------------
+Kendall Tau         : 19/33
+Pearsonr            : 23/33
+Spearmanr           : 21/33
+Mean Absolute Error : 33/33
+Mean Squared Error  : 33/33
+R²                  : 33/33
+
+====================================================================================================
+BOLTZ2 CROSS-DATASET PERFORMANCE SUMMARY
+====================================================================================================
+Dataset              MAE Rank     MAE %ile   Corr Rank    Corr %ile  Best At         Worst At
+----------------------------------------------------------------------------------------------------
+Aggregated           33           3.0%      20           42.4%      kendall tau     mean absolute error
+SARS-CoV-2           33           3.0%      21           39.4%      pearsonr        mean absolute error
+MERS-CoV             33           3.0%      21           39.4%      kendall tau     mean absolute error
+
+KEY INSIGHTS:
+--------------------------------------------------
+• Best MAE performance: Aggregated Dataset (rank 33)
+• Best correlation performance: Aggregated Dataset (rank 20)
+• Boltz2 shows stronger correlation metrics than absolute error metrics
+• Performance varies significantly between SARS-CoV-2 and MERS-CoV targets
