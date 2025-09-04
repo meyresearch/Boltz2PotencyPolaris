@@ -59,7 +59,7 @@ def evaluate_potency_predictions(
 
     # Add metadata
     scores["Test Set"] = "test"
-    scores["Method"] = method_label
+    scores["method"] = method_label
     return scores
 
 

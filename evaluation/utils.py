@@ -98,7 +98,7 @@ def scores_to_leaderboards(
     for name, group in scores.groupby("Target Label"):
         raw_leaderboard = (
             group.pivot_table(
-                index=["Method"],
+                index=["method"],
                 columns="Metric",
                 values="Score",
                 aggfunc=["mean", "std"],
@@ -108,7 +108,7 @@ def scores_to_leaderboards(
         )
 
         metrics = raw_leaderboard["mean"].columns
-        leaderboard = pd.DataFrame({"Method": raw_leaderboard["Method"]})
+        leaderboard = pd.DataFrame({"method": raw_leaderboard["method"]})
 
         for metric in metrics:
             leaderboard[metric] = raw_leaderboard[
