@@ -1,6 +1,6 @@
 # Boltz Polaris Potency Evaluation
 
-This repository contains evaluation scripts and results for the Boltz model's performance on the Polaris blind challenge datasets, specifically focusing on antiviral potency, ligand poses, and ADMET predictions.
+This repository contains evaluation scripts and results for the Boltz 2's performance on the Polaris blind challenge datasets, specifically focusing on antiviral potency.
 
 ## Results Summary
 ### Aggregated Performance
@@ -89,3 +89,27 @@ from evaluation import potency, ligand_poses, admet
 ## Attribution
 
 The evaluation framework is adapted from the [ASAP Polaris Blind Challenge Examples](https://github.com/asapdiscovery/asap-polaris-blind-challenge-examples) repository (accessed August 21st, 2025).
+
+## Boltz 2 Input/Output
+
+For the SARS-CoV-2 (PDB ID: 7CAM) and MERS-CoV (PDB ID: 8R5J) main proteases, the sequences for chains A and B were extracted from the respective PDB entries. These sequences were used to co-fold the dimer structure with the ASAP molecule. Initially, one YAML file was used to generate for each virus (MERS and SARS) to obtain the multiple sequence alignments (MSA). The resulting MSA CSV files were then reused to generate for the remaining YAML files for subsequent predictions.
+
+To generate predictions using Boltz 2, the following command is executed:
+```bash
+boltz predict example_yaml_files/ASAP-0000175_MERS.yaml --use_msa_server --use_potentials --no_kernel
+```
+
+
+
+According to the [Boltz documentation](https://github.com/jwohlwend/boltz/blob/main/docs/prediction.md), the model's output can be converted to pIC50 (in kcal/mol) using the formula:
+```
+pIC50 = (6 - y) * 1.364
+```
+where `y` is the model's prediction. To obtain a unitless pIC50 value, the conversion simplifies to:
+```
+pIC50 = 6 - y
+```
+This adjustment removes the scaling factor of 1.364, resulting in a dimensionless pIC50 value.
+
+
+
